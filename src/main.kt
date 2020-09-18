@@ -1,13 +1,15 @@
+import exercicio1.Exercicio1
+import exercicio2.Exercicio2
+import exercicio3.Prova
+
 fun main() {
-//    exercicio1()
-//    exercicio2()
+//    val exe1 = Exercicio1()
+//    exe1.main()
 
-//    val list = mutableSetOf(1, 2, 3)
-//    val p = Prova()
-//    p.somaTotal(list)
-}
+//    val exe2 = Exercicio2()
+//    exe2.main()
 
-
-fun exercicio4() {
-
+//    val list = mutableSetOf(1, 5, 45, 99)
+//    val prova = Prova()
+//    prova.somaTotal(list)
 }

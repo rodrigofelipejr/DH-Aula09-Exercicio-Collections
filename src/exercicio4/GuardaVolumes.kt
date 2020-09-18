@@ -1,6 +1,9 @@
 package exercicio4
 
-class GuardaVolumes(var volumes: MutableMap<Int, MutableList<Peca>>) {
+import exercicio4.Peca
+
+class GuardaVolumes() {
+    private var armario = mutableMapOf<Int, MutableList<Peca>>()
     private var identificador: Int = 0
 
     fun guardarPecas(listaPecas: MutableList<Peca>): Int {
@@ -8,20 +11,14 @@ class GuardaVolumes(var volumes: MutableMap<Int, MutableList<Peca>>) {
             return -1
 
         identificador++
-        volumes.put(identificador, listaPecas)
+        armario.put(identificador, listaPecas)
 
         return identificador
     }
 
-    fun mostrarPecas() {
-        volumes.forEach { println(it) }
-    }
+    fun mostrarPecas() = armario.forEach { println("${it.key} - ${it.value.toString()}") }
 
-    fun mostrarPecas(numero: Int) {
-        println(volumes[numero])
-    }
+    fun mostrarPecas(numero: Int) = println(armario[numero])
 
-    fun devolverPecas(numero: Int) {
-        volumes.remove(numero)
-    }
+    fun devolverPecas(numero: Int) = armario.remove(numero)
 }
